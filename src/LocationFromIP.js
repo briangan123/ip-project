@@ -1,7 +1,7 @@
 // dependencies / things imported
 import { LitElement, html, css } from 'lit';
-import { UserIP } from './UserIP.js';
 // import {WikipediaQuery} from '@lrnwebcomponents/wikipedia-query/wikipedia-query.js';
+import { UserIP } from './UserIP.js';
 
 export class LocationFromIP extends LitElement {
   static get tag() {
@@ -75,8 +75,15 @@ export class LocationFromIP extends LitElement {
         <a href="https://www.google.com/maps/@${this.lat},${this.long},14z">
           Open in Google Maps
         </a>
-        console.log(${this.city} ${this.state})
-      </ul>`;
+      </ul>
+      <script>
+        window.__appCDN = 'https://cdn.webcomponents.psu.edu/cdn/';
+      </script>
+      <script src="https://cdn.webcomponents.psu.edu/cdn/build.js"></script>
+      <h2>A sample pen to demonstrate the unbundler</h2>
+      <wikipedia-query search="${this.city}, ${this.state}"></wikipedia-query>
+      <wikipedia-query search="${this.city}"></wikipedia-query>
+      <wikipedia-query search="${this.state}"></wikipedia-query> `;
   }
 }
 
