@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 // dependencies / things imported
 import { LitElement, html, css } from 'lit';
 import '@lrnwebcomponents/wikipedia-query/wikipedia-query.js';
